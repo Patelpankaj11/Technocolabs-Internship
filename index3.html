@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/mycss/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <title>Form a Story</title>
+</head>
+
+<body>
+    <section id="top">
+        <img src="https://s3.amazonaws.com/codecademy-content/courses/learn-html-forms/formAStoryLogo.svg" alt="Form A Story Logo">
+    </section>
+
+    <section id="main">
+        <h1>Complete the Form -<br> Complete the Story!</h1>
+        <hr>
+        <form action="javascript/main.js" method="get">
+            <label for="animal-1">Animal1</label><br>
+            <input id="animal-1" type="text"><br>
+            <label for="animal-2">Animal2</label><br>
+            <input id="animal-2" type="text" required><br>
+            <label for="animal-3">Animal3</label><br>
+            <input id="animal-3" type="text" required><br>
+            <label for="adj-1">adj</label><br>
+            <input id="adj-1" type="text" required><br>
+            <label for="verb-1">Verb</label><br>
+            <input id="verb-1" type="text" required><br>
+            <label for="num-1">Num</label><br>
+            <input id="num-1" type="number" required><br>
+            <span>Yes or No</span><br>
+            <input id="yes" type="radio" name="answer" value="yes" required><br>
+            <input id="no" type="radio" name="answer" value="no" required><br>
+            <label for="no"></label><br>
+            <label for="speed">Speed : </label>
+            <select name="speed" id="speed" required>
+                <option value="faster">Faster</option>
+             </select><br>
+            <label for="quote">quote :</label>
+            <input id="quote" type="text" required list="quote-choices">
+            <datalist id="quote-choices">
+                <option value="winner gets ice cream!"></option>
+            </datalist><br>
+            <label for="message">Message:</label><br>
+
+            <textarea name="message" id="massage" cols="40" rows="10">
+
+            </textarea><br>
+
+
+
+            <input type="submit" value="Form My Story!">
+
+
+
+    </section>
+    <script src="/javascript/main.js"></script>
+</body>
+
+</html>
