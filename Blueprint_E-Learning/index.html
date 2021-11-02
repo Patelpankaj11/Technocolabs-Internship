@@ -1,0 +1,619 @@
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- custom stylesheet -->
+<link rel="stylesheet" href="/style.css">
+
+<title>Udemy</title>
+</head>
+
+
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <a class="navbar-brand" href="index.html"><img src="data:image/png;base64,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"
+                class="mr-2" width="100px"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto container-fluid">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-list-ul"></i> Categories
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+
+                <li class="nav-item col-8">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control form-control-lg col-9 bg-light border-0 rounded-radius-left" type="search" placeholder="Search for Courses" aria-label="Search">
+                        <button class="btn btn-lg btn-light col-2 my-2 my-sm-0 ml-0 rounded-radius-right" type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </li>
+            </ul>
+
+            <a class="btn btn-light mx-2" href="#" data-toggle="popover" data-trigger="focus" data-content="Get your team access to Udemy's top 2,500 courses anytime, anywhere" title="Try Udemy for Business" data-placement="bottom">Udemy for Business</a>
+            <a class="btn btn-light mx-2" href="#">Become an Instructor</a>
+            <a class="btn btn-light mx-2 rounded-circle" href="#"><i class="fa fa-shopping-cart"></i></a>
+            <a class="btn btn-success mx-1" href="#">Login</a>
+            <a class="btn btn-danger mx-1" href="#">Sign Up</a>
+
+
+
+        </div>
+    </nav>
+
+    <!-- Body starts here -->
+    <div class="jumbotron mb-0 bg-banner" style="height:500px; padding-top:150px">
+        <div class="container">
+            <div class="row align-items-end">
+                <div class="col">
+                    <div class="col-md-4 text-light">
+                        <h1 class="display-5">Hot Sale - $9.99 courses</h1>
+                        <p class="lead">Get our best deal on courses!</p>
+                    </div>
+                    <div class="col-md-6">
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control form-control-lg col-9 border-right-0 rounded-radius-left" type="search" placeholder="what do you want to learn!" aria-label="Search">
+                            <button class="btn btn-lg btn-danger border-left-0 rounded-radius-right col-2 my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="color-grad text-light py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="media">
+                        <i class="fa fa-play-circle mr-3"></i>
+                        <div class="media-body">
+                            <h5 class="mt-0">Fresh Content</h5>
+                            <p>Choose from 65,000 courses with new additions published every month!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="media">
+                        <i class="fa fa-certificate mr-3"></i>
+                        <div class="media-body">
+                            <h5 class="mt-0">Trusted Instructors</h5>
+                            <p>Take courses taught by industry experts around the world!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="media">
+                        <i class="fa fa-spinner mr-3"></i>
+                        <div class="media-body">
+                            <h5 class="mt-0">Flexible Learning</h5>
+                            <p>learn on your terms with lifetime course access and the Udemy mobile app</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h3><small class="text-muted">Top Courses for "Business"</small></h3>
+        <div class="card-deck">
+            <div class="card mx-1">
+                <span class="badge badge-info w-50 badge-style rounded-radius-right">BEST SELLER</span>
+                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDx8fyyp5SqJN2nqdkS0gB_4sDzlq4vEc0Xg&usqp=CAU" alt="image">
+                <div class="card-body px-2">
+                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
+                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
+                    <p class="card-text"><small class="text-muted">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star-half text-warning"></i>
+                        4.5 (18,560)</small>
+                        <span class="d-block"></span>
+                        <span class="float-right">
+                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
+                        <small><strong>$9.99</strong></small>
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mx-1">
+                <span class="badge badge-info w-50 badge-style rounded-radius-right">BEST SELLER</span>
+                <img class="card-img-top" src="https://img.lovepik.com/photo/50089/0761.jpg_wh860.jpg" alt="image">
+                <div class="card-body px-2">
+                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
+                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
+                    <p class="card-text"><small class="text-muted">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star-half text-warning"></i>
+                        4.5 (18,560)</small>
+                        <span class="d-block"></span>
+                        <span class="float-right">
+                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
+                        <small><strong>444</strong></small>
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mx-1">
+                <span class="badge badge-warning w-50 badge-style rounded-radius-right">TOP RATED</span>
+                <img class="card-img-top" src="https://img.lovepik.com/photo/50089/0761.jpg_wh860.jpg" alt="image">
+                <div class="card-body px-2">
+                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
+                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
+                    <p class="card-text"><small class="text-muted">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star-half text-warning"></i>
+                        4.5 (18,560)</small>
+                        <span class="d-block"></span>
+                        <span class="float-right">
+                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
+                        <small><strong>$9.99</strong></small>
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mx-1">
+                <img class="card-img-top" src="data:image/jpeg;base64,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"
+                    alt="image">
+                <div class="card-body px-2">
+                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
+                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
+                    <p class="card-text"><small class="text-muted">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star-half text-warning"></i>
+                        4.5 (18,560)</small>
+                        <span class="d-block"></span>
+                        <span class="float-right">
+                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
+                        <small><strong>$9.99</strong></small>
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mx-1">
+                <img class="card-img-top" src="data:image/jpeg;base64,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"
+                    alt="image">
+                <div class="card-body px-2">
+                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
+                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
+                    <p class="card-text"><small class="text-muted">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star-half text-warning"></i>
+                        4.5 (18,560)</small>
+                        <span class="d-block"></span>
+                        <span class="float-right">
+                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
+                        <small><strong>$9.99</strong></small>
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h3><small class="text-muted">Top Courses for "Development"</small></h3>
+        <div class="card-deck">
+            <div class="card mx-1">
+                <span class="badge badge-info w-50 badge-style rounded-radius-right">BEST SELLER</span>
+                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDx8fyyp5SqJN2nqdkS0gB_4sDzlq4vEc0Xg&usqp=CAU" alt="image">
+                <div class="card-body px-2">
+                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
+                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
+                    <p class="card-text"><small class="text-muted">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star-half text-warning"></i>
+                        4.5 (18,560)</small>
+                        <span class="d-block"></span>
+                        <span class="float-right">
+                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
+                        <small><strong>$9.99</strong></small>
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mx-1">
+                <span class="badge badge-info w-50 badge-style rounded-radius-right">BEST SELLER</span>
+                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvV3hd6eZgYWGwtdYHop2qDtfS4P9M1TgL9A&usqp=CAU" alt="image">
+                <div class="card-body px-2">
+                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
+                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
+                    <p class="card-text"><small class="text-muted">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star-half text-warning"></i>
+                        4.5 (18,560)</small>
+                        <span class="d-block"></span>
+                        <span class="float-right">
+                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
+                        <small><strong>$9.99</strong></small>
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mx-1">
+                <span class="badge badge-warning w-50 badge-style rounded-radius-right">TOP RATED</span>
+                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR55xlIPhGSU5DmMmVVzarMSKJhN7Gd6kXmA&usqp=CAU" alt="image">
+                <div class="card-body px-2">
+                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
+                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
+                    <p class="card-text"><small class="text-muted">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star-half text-warning"></i>
+                        4.5 (18,560)</small>
+                        <span class="d-block"></span>
+                        <span class="float-right">
+                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
+                        <small><strong>$9.99</strong></small>
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mx-1">
+                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT50P-h-t_9t677Rh_dJ041xqP2sTMuYYe1WA&usqp=CAU" alt="image">
+                <div class="card-body px-2">
+                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
+                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
+                    <p class="card-text"><small class="text-muted">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star-half text-warning"></i>
+                        4.5 (18,560)</small>
+                        <span class="d-block"></span>
+                        <span class="float-right">
+                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
+                        <small><strong>$9.99</strong></small>
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mx-1">
+                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYnb-_esCuj8vLiAyRkfsc4_VQkzB1Up7Uww&usqp=CAU" alt="image">
+                <div class="card-body px-2">
+                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
+                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
+                    <p class="card-text"><small class="text-muted">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star-half text-warning"></i>
+                        4.5 (18,560)</small>
+                        <span class="d-block"></span>
+                        <span class="float-right">
+                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
+                        <small><strong>$9.99</strong></small>
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h3><small class="text-muted">Top Courses for "Design"</small></h3>
+        <div class="card-deck">
+            <div class="card mx-1">
+                <span class="badge badge-info w-50 badge-style rounded-radius-right">BEST SELLING</span>
+                <img class="card-img-top" src="https://media.istockphoto.com/photos/young-afro-american-woman-sitting-at-table-with-books-and-laptop-for-picture-id1266628951?b=1&k=20&m=1266628951&s=170667a&w=0&h=n9hssLnsA4h2cqZdUJ40-iT_uvEgLkom6NopI77ZzXs=" alt="image">
+                <div class="card-body px-2">
+                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
+                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
+                    <p class="card-text"><small class="text-muted">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star-half text-warning"></i>
+                        4.5 (18,560)</small>
+                        <span class="d-block"></span>
+                        <span class="float-right">
+                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
+                        <small><strong>$9.99</strong></small>
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mx-1">
+                <span class="badge badge-info w-50 badge-style rounded-radius-right">BEST SELLING</span>
+                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD5hwUn1P0kDOtDZ1yvpZallClrbuu1jbP9Q&usqp=CAU" alt="image">
+                <div class="card-body px-2">
+                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
+                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
+                    <p class="card-text"><small class="text-muted">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star-half text-warning"></i>
+                        4.5 (18,560)</small>
+                        <span class="d-block"></span>
+                        <span class="float-right">
+                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
+                        <small><strong>$9.99</strong></small>
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mx-1">
+                <span class="badge badge-warning w-50 badge-style rounded-radius-right">TOP RATED</span>
+                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf2RwEuUF93BDM4Us4go2L0fdohk_Fc-2IXQ&usqp=CAU" alt="image">
+                <div class="card-body px-2">
+                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
+                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
+                    <p class="card-text"><small class="text-muted">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star-half text-warning"></i>
+                        4.5 (18,560)</small>
+                        <span class="d-block"></span>
+                        <span class="float-right">
+                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
+                        <small><strong>$9.99</strong></small>
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mx-1">
+                <img class="card-img-top" src="https://www.homeworkhelpglobal.com/wp-content/uploads/2019/03/studying-student-on-desk.jpg" alt="image">
+                <div class="card-body px-2">
+                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
+                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
+                    <p class="card-text"><small class="text-muted">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star-half text-warning"></i>
+                        4.5 (18,560)</small>
+                        <span class="d-block"></span>
+                        <span class="float-right">
+                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
+                        <small><strong>$9.99</strong></small>
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mx-1">
+                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK-y8jW-1H2Mgl3PFBjN6V1Ro66imVFvXMqw&usqp=CAU" alt="image">
+                <div class="card-body px-2">
+                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
+                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
+                    <p class="card-text"><small class="text-muted">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star-half text-warning"></i>
+                        4.5 (18,560)</small>
+                        <span class="d-block"></span>
+                        <span class="float-right">
+                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
+                        <small><strong>$9.99</strong></small>
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container mt-5">
+        <h3><small class="text-muted">Discover Our Popular Courses</small></h3>
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="#" class="btn btn-lg btn-block btn-info">TOP RATED</a>
+            </div>
+            <div class="col-sm-4">
+                <a href="#" class="btn btn-lg btn-block btn-secondary">TRENDING</a>
+            </div>
+            <div class="col-sm-4">
+                <a href="#" class="btn btn-lg btn-block btn-primary">NEW & NOTEWORTHY</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h3><small class="text-muted">Achieve Your Goals</small></h3>
+        <div class="row">
+            <div class="col-md-4">
+                <a href="#">
+                    <figure class="figure">
+                        <img class="figure-img img-fluid rounded" alt="Image here" src="images/bg3.jpg">
+                        <figcaption class="figure-caption text-center text-info">Expanding Your Programming Knowledge</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="#">
+                    <figure class="figure">
+                        <img class="figure-img img-fluid rounded" alt="Image here" src="images/bg1.jpg">
+                        <figcaption class="figure-caption text-center text-info">Be Your Own Boss</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="#">
+                    <figure class="figure">
+                        <img class="figure-img img-fluid rounded" alt="Image here" src="images/bg2.jpg">
+                        <figcaption class="figure-caption text-center text-info">Land an Exciting New Tech Job</figcaption>
+                    </figure>
+                </a>
+            </div>
+        </div>
+
+        <!-- second row starts here -->
+        <div class="row">
+            <div class="col-md-3">
+                <a href="#">
+                    <figure class="figure">
+                        <img class="figure-img img-fluid rounded" alt="Image here" src="images/bg1.jpg">
+                        <figcaption class="figure-caption text-center text-info">Indulge Your Curiosity</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#">
+                    <figure class="figure">
+                        <img class="figure-img img-fluid rounded" alt="Image here" src="images/bg3.jpg">
+                        <figcaption class="figure-caption text-center text-info">Invest in Your Passion</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#">
+                    <figure class="figure">
+                        <img class="figure-img img-fluid rounded" alt="Image here" src="images/bg2.jpg">
+                        <figcaption class="figure-caption text-center text-info">Unlock Your Potential</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#">
+                    <figure class="figure">
+                        <img class="figure-img img-fluid rounded" alt="Image here" src="images/bg1.jpg">
+                        <figcaption class="figure-caption text-center text-info">Make Analytics Work for You</figcaption>
+                    </figure>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h3><small class="text-muted">Featured Topics</small></h3>
+        <div class="row">
+            <a href="#" class="btn btn-light shadow">Photography</a>
+            <a href="#" class="btn btn-light shadow mx-1">Digital Marketing</a>
+            <a href="#" class="btn btn-light shadow mx-1">Project Management</a>
+            <a href="#" class="btn btn-light shadow mx-1">Graphic Design</a>
+            <a href="#" class="btn btn-light shadow mx-1">Web Design</a>
+            <a href="#" class="btn btn-light shadow mx-1">Data Science</a>
+            <a href="#" class="btn btn-light shadow mx-1">Python</a>
+            <a href="#" class="btn btn-light shadow mx-1">SQL</a>
+            <a href="#" class="btn btn-light shadow mx-1">Piano</a>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top:120px;">
+        <div class="row">
+            <div class="col text-center border-right">
+                <div class="col-8 offset-2">
+                    <h4>Become an Instructor</h4>
+                    <p class="lead" style="font-size:15px;">Teach what you love! Udemy gives you the tools to create an online course.</p>
+                    <a href="#" class="btn btn-danger btn-lg">Start Teaching</a>
+                </div>
+            </div>
+            <div class="col text-center">
+                <div class="col-8 offset-2">
+                    <h4>Udemy for Business</h4>
+                    <p class="lead" style="font-size:15px;">Get unlimited access to 2,500 of Udemy's top courses for your team.</p>
+                    <a href="#" class="btn btn-danger btn-lg">Get Udemy for Business</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5 border-top px-5 pt-5" style="font-size:13px;">
+        <div class="col">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-info"><strong>Udemy for Business</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-info"><strong>Become an Instructor</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-info">Mobile Apps</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-info">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-info">Careers</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-info">Blog</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-info">Topics</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-info">Support</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-info">Affiliate</a>
+                </li>
+            </ul>
+        </div>
+
+
+</body>
+
+</html>
+
+</html>
